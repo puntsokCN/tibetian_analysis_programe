@@ -15,7 +15,7 @@
 
 百度网盘： [链接](https://pan.baidu.com/s/1TDNPVIjC7SPFaO4rwp0YpQ) 提取码: 3ucu 
 
-微云：[链接](https://share.weiyun.com/5MxBspK) 密码：tibet
+微云：[链接](https://share.weiyun.com/5MxBspK) 密码：tibet  
 码云: [链接](https://gitee.com/ahgey/tibetan_analysis_programe)
 
 ### 关于输入
