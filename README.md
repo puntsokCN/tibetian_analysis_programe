@@ -13,7 +13,7 @@
 
 ### 下载
 
-百度网盘： [链接](https://pan.baidu.com/s/1gDClM8dZ0KD1tapsljDvTw ) 提取码：ny33 
+百度网盘： [链接](https://pan.baidu.com/s/1gDClM8dZ0KD1tapsljDvTw ) 提取码：ny33   
 码云: [链接](https://gitee.com/ahgey/tibetan_analysis_programe)
 
 ### 关于输入
