@@ -736,7 +736,6 @@ class Auxiliary_Word():
                     return "སོ་"
             else:
                 if keys[-2] != None:
-
                     return keys[-2]+"ོ་"
                 else:
                     return "འོ་"
@@ -1126,3 +1125,5 @@ class Auxiliary_Word():
 
 if __name__ == '__main__':
     pass
+
+# 总结 ：虽然项目无BUG，但是写了一个难以维护的代码，一点也不 python 的 python 程序 ， 只能用不敢改...   一砣  *山 !!!!

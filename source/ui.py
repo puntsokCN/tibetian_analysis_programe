@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'ui.ui'
 #
-# Created by: PyQt5 UI code generator 5.14.2
+# Created by: PyQt5 UI code generator 5.14.1
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -13,7 +13,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(867, 245)
+        MainWindow.resize(867, 269)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("language_128px_1233037_easyicon.net.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
@@ -98,8 +98,11 @@ class Ui_MainWindow(object):
         self.actionyuyan.setObjectName("actionyuyan")
         self.actiondf = QtWidgets.QAction(MainWindow)
         self.actiondf.setObjectName("actiondf")
+        self.actiongithub = QtWidgets.QAction(MainWindow)
+        self.actiongithub.setObjectName("actiongithub")
         self.menu_font.addAction(self.actionchange_Font)
         self.menu_help.addAction(self.actionhelp)
+        self.menu_help.addAction(self.actiongithub)
         self.menu_quit.addAction(self.actionquit)
         self.menubar.addAction(self.menu_font.menuAction())
         self.menubar.addAction(self.menu_help.menuAction())
@@ -117,8 +120,9 @@ class Ui_MainWindow(object):
         self.menu_help.setTitle(_translate("MainWindow", "帮助"))
         self.menu_quit.setTitle(_translate("MainWindow", "退出"))
         self.actionchange_Font.setText(_translate("MainWindow", "字体"))
-        self.actionhelp.setText(_translate("MainWindow", "帮助/关于"))
+        self.actionhelp.setText(_translate("MainWindow", "码云"))
         self.actionabout.setText(_translate("MainWindow", "关于"))
         self.actionquit.setText(_translate("MainWindow", "退出"))
         self.actionyuyan.setText(_translate("MainWindow", "界面语言"))
         self.actiondf.setText(_translate("MainWindow", "界面语言"))
+        self.actiongithub.setText(_translate("MainWindow", "github"))

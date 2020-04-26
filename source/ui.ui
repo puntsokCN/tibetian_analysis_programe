@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>867</width>
-    <height>245</height>
+    <height>269</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -125,6 +125,7 @@
      <string>帮助</string>
     </property>
     <addaction name="actionhelp"/>
+    <addaction name="actiongithub"/>
    </widget>
    <widget class="QMenu" name="menu_quit">
     <property name="title">
@@ -144,7 +145,7 @@
   </action>
   <action name="actionhelp">
    <property name="text">
-    <string>帮助/关于</string>
+    <string>码云</string>
    </property>
   </action>
   <action name="actionabout">
@@ -165,6 +166,11 @@
   <action name="actiondf">
    <property name="text">
     <string>界面语言</string>
+   </property>
+  </action>
+  <action name="actiongithub">
+   <property name="text">
+    <string>github</string>
    </property>
   </action>
  </widget>

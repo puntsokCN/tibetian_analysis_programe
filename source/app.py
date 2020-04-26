@@ -1,14 +1,19 @@
 #! /usr/bin/env python3
 # -*- coding:utf-8 -*-
+
+"""
+程序业务实现类 及 执行 模块
+"""
 import sys
-import analysis
-from ui import Ui_MainWindow
 from os import getcwd
 from sqlite3 import connect
-from webbrowser import  get, open_new_tab
-from PyQt5.QtWidgets import  QFontDialog, QMessageBox, QApplication, QMainWindow, QFontDialog
-from PyQt5.QtCore import QCoreApplication
+from webbrowser import get, open_new_tab
 
+from PyQt5.QtCore import QCoreApplication
+from PyQt5.QtWidgets import QApplication, QFontDialog, QMainWindow, QMessageBox
+
+import analysis
+from ui import Ui_MainWindow
 
 
 class MyPyQT_Form(QMainWindow, Ui_MainWindow):
@@ -32,7 +37,8 @@ class MyPyQT_Form(QMainWindow, Ui_MainWindow):
         # --------- code here ----------
         # Menu
         self.actionchange_Font.triggered.connect(self.font_func)  # 设置字体
-        self.actionhelp.triggered.connect(self.help_func)  # 设置帮助
+        self.actionhelp.triggered.connect(self.mayun_func)  # 设置码云
+        self.actiongithub.triggered.connect(self.github_func)  # 设置github
         self.actionquit.triggered.connect(self.quit_func)  # 设置退出
         # Button
         self.button_analysis_aux.clicked.connect(self.analysis_aux_func)
@@ -52,9 +58,9 @@ class MyPyQT_Form(QMainWindow, Ui_MainWindow):
             self.textEdit_input.setFont(font)
             self.textBrowser_rec.setFont(font)
 
-    def help_func(self):
+    def mayun_func(self):
         """
-        显示帮助窗口
+        显示帮助窗口 码云外链
         Returns
         -------
         """
@@ -64,6 +70,17 @@ class MyPyQT_Form(QMainWindow, Ui_MainWindow):
         except Exception as e:
             open_new_tab(url)
 
+    def github_func(self):
+        """
+        显示帮助窗口 github外链
+        Returns
+        -------
+        """
+        url = "https://github.com/puntsokCN/tibetian_analysis_programe"
+        try:
+            get('chrome').open_new_tab(url)
+        except Exception as e:
+            open_new_tab(url)
 
     def quit_func(self):
         """
@@ -125,10 +142,14 @@ class MyPyQT_Form(QMainWindow, Ui_MainWindow):
                 # print("4:", result[0][i][3])  
                 if result[0][i][3] == None:  # 判断及物性 和  命令式
                     comm = "མིན་འདུག་།"
-                    yn = "ཐ་མི་དད་པ་།"
                 else:
                     comm = result[0][i][3]
+                    
+                if result[0][i][4] == 1:  # 判断及物性 和  命令式    
+                    yn = "ཐ་མི་དད་པ་།"
+                else:
                     yn = "ཐ་དད་པ་།"
+                
                 set_text = set_text + "[{}]:".format(i+1) + " ད་ལྟ་བ་། " + result[0][i][0] + "\tའདས་པ་། " + result[0][i][1] + "\tམ་འོངས་པ་། " + \
                             result[0][i][2] + "\tསྐུལ་ཚིག་། " + comm + "\tབྱ་བྱེད་" + yn + "\n"
             self.textBrowser_rec.setText(set_text)
