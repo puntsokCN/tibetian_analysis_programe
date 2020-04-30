@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 
 # Author   : puntsok
-# Blog     : https://github.com/puntsokCN
+# Blog     : https://puntsokcn.github.io/
 # Date     : 2019/12/30
 # Name     : analysis
 # Software : vscode
