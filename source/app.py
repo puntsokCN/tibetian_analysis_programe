@@ -1,6 +1,12 @@
 #! /usr/bin/env python3
 # -*- coding:utf-8 -*-
 
+# Author   : puntsok
+# Blog     : https://puntsokcn.github.io/
+# Date     : 2019/12/30
+# Name     : app
+# Software : vscode
+# Note     : 程序启动模块、后台业务逻辑模块
 """
 程序业务实现类 及 执行 模块
 """
