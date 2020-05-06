@@ -7,6 +7,7 @@
 # Name     : app
 # Software : vscode
 # Note     : 程序启动模块、后台业务逻辑模块
+
 """
 程序业务实现类 及 执行 模块
 """
@@ -40,6 +41,7 @@ class MyPyQT_Form(QMainWindow, Ui_MainWindow):
 
         """
         super(MyPyQT_Form, self).retranslateUi(self)
+        
         # --------- code here ----------
         # Menu
         self.actionchange_Font.triggered.connect(self.font_func)  # 设置字体
@@ -60,7 +62,7 @@ class MyPyQT_Form(QMainWindow, Ui_MainWindow):
         """
 
         font, ok = QFontDialog.getFont()
-        if ok:
+        if ok:            # 如果用户点击确定更改字体，则输入输出框都 使用该字体
             self.textEdit_input.setFont(font)
             self.textBrowser_rec.setFont(font)
 
@@ -146,12 +148,12 @@ class MyPyQT_Form(QMainWindow, Ui_MainWindow):
         else:
             for i in range(len(result[0])):
                 # print("4:", result[0][i][3])  
-                if result[0][i][3] == None:  # 判断及物性 和  命令式
+                if result[0][i][3] == None:  # 判断 是否存在 命令式
                     comm = "མིན་འདུག་།"
                 else:
                     comm = result[0][i][3]
                     
-                if result[0][i][4] == 1:  # 判断及物性 和  命令式    
+                if result[0][i][4] == 1:  # 判断及物性    
                     yn = "ཐ་མི་དད་པ་།"
                 else:
                     yn = "ཐ་དད་པ་།"
@@ -161,7 +163,7 @@ class MyPyQT_Form(QMainWindow, Ui_MainWindow):
             self.textBrowser_rec.setText(set_text)
 
 # 启动入口
-if __name__ == '__main__':
+if __name__ == '__main__':          # 启动 QT程序，并等待用户操作
     app = QApplication(sys.argv)
     my_pyqt_form = MyPyQT_Form()
     my_pyqt_form.show()
