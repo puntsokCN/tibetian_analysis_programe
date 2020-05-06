@@ -13,8 +13,7 @@
 
 ### 下载
 
-百度网盘： [链接](https://pan.baidu.com/s/1gDClM8dZ0KD1tapsljDvTw ) 提取码：ny33   
-码云: [链接](https://gitee.com/ahgey/tibetan_analysis_programe)
+ [百度网盘下载](https://pan.baidu.com/s/1x-OXkKf4D18o_Qr-9f2Tcg)    提取码：jlao  
 
 ### 关于输入
 
@@ -27,5 +26,4 @@
 ##### * 动词分析
 
 输入框请只输入动词，这个模块采用的是查表法，由于暂时未找到数字版动词表资源，可查询范围暂时有限，后续将会长期维护数据库，不断更新增加权威的动词数据  
-##### * 数据库进度
-可查找基字（མིང་གཞི་）范围 : ཀ་ ཁ་
+
