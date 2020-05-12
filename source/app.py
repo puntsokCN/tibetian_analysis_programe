@@ -110,7 +110,8 @@ class MyPyQT_Form(QMainWindow, Ui_MainWindow):
         """
         str = self.textEdit_input.toPlainText()
         res = analysis.Auxiliary_Word(str).analysis()
-
+        if res:
+            res = "ཚིག་ཕྲད་བེད་སྤྱོད་འགྲིག་པ་།"
         self.textBrowser_rec.setText(res)
 
     def analysis_verb_func(self):
